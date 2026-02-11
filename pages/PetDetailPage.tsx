@@ -95,7 +95,7 @@ const PetDetailPage: React.FC = () => {
   }
 
   return (
-    <div className="flex flex-col h-full bg-white dark:bg-slate-900 animate-fade-in pb-32 overflow-y-auto no-scrollbar relative">
+    <div className="flex flex-col flex-1 min-h-0 bg-white dark:bg-slate-900 animate-fade-in pb-32 overflow-y-auto no-scrollbar relative">
       {/* Header Image */}
       <div className="relative h-[450px] w-full shrink-0">
         <img

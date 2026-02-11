@@ -89,7 +89,7 @@ const MessagePage: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col h-full bg-white dark:bg-[#1a2b16] animate-fade-in relative overflow-hidden">
+    <div className="flex flex-col flex-1 min-h-0 bg-white dark:bg-[#1a2b16] animate-fade-in relative overflow-hidden">
       <header className="px-6 pt-12 pb-4 space-y-4 bg-white dark:bg-[#1a2b16] sticky top-0 z-20">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-bold tracking-tight">消息中心</h1>

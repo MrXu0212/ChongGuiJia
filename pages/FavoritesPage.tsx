@@ -45,7 +45,7 @@ const FavoritesPage: React.FC = () => {
     };
 
     return (
-        <div className="flex flex-col h-full bg-background-light dark:bg-background-dark animate-fade-in pb-20 overflow-y-auto no-scrollbar">
+        <div className="flex flex-col flex-1 min-h-0 bg-background-light dark:bg-background-dark animate-fade-in pb-20 overflow-y-auto no-scrollbar">
             <header className="px-6 pt-12 pb-4 sticky top-0 z-20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
                 <div className="flex items-center justify-between mb-2">
                     <h1 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">我的收藏</h1>

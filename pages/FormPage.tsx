@@ -48,7 +48,7 @@ const FormPage: React.FC = () => {
   // 提交成功页面
   if (success) {
     return (
-      <div className="flex flex-col items-center justify-center h-full bg-background-light dark:bg-background-dark animate-fade-in px-8">
+      <div className="flex flex-col items-center justify-center flex-1 min-h-0 bg-background-light dark:bg-background-dark animate-fade-in px-8">
         <div className="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center mb-6">
           <span className="material-icons-round text-primary text-5xl">check_circle</span>
         </div>
@@ -73,7 +73,7 @@ const FormPage: React.FC = () => {
   }
 
   return (
-    <div className="flex flex-col h-full bg-background-light dark:bg-background-dark animate-fade-in relative pb-32 overflow-y-auto no-scrollbar">
+    <div className="flex flex-col flex-1 min-h-0 bg-background-light dark:bg-background-dark animate-fade-in relative pb-32 overflow-y-auto no-scrollbar">
       <header className="px-6 pt-12 pb-4 flex flex-col gap-4">
         <div className="flex items-center justify-between">
           <button

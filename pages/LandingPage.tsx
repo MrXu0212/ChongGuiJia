@@ -14,6 +14,7 @@ const LandingPage: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [successMsg, setSuccessMsg] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
 
   // 如果已登录，重定向到发现页
   React.useEffect(() => {
@@ -45,6 +46,9 @@ const LandingPage: React.FC = () => {
         if (!isLoggedIn) {
           setSuccessMsg('注册成功！请前往邮箱点击验证链接，然后再登录');
           setIsLoginMode(true);
+          setEmail('');
+          setPassword('');
+          setNickname('');
         } else {
           navigate('/discover');
         }
@@ -57,7 +61,7 @@ const LandingPage: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col h-full animate-fade-in">
+    <div className="flex flex-col flex-1 min-h-0 animate-fade-in">
       {/* Hero Image Section */}
       <div className="relative w-full h-[40vh] overflow-hidden">
         <img
@@ -84,7 +88,7 @@ const LandingPage: React.FC = () => {
           {/* 切换标签 */}
           <div className="flex bg-zinc-100 dark:bg-zinc-800 rounded-xl p-1 mb-2">
             <button
-              onClick={() => { setIsLoginMode(true); setError(''); }}
+              onClick={() => { setIsLoginMode(true); setError(''); setSuccessMsg(''); setEmail(''); setPassword(''); setNickname(''); setShowPassword(false); }}
               className={`flex-1 py-2.5 rounded-lg text-sm font-semibold transition-all ${isLoginMode
                 ? 'bg-white dark:bg-zinc-700 text-zinc-900 dark:text-white shadow-sm'
                 : 'text-zinc-500 dark:text-zinc-400'
@@ -93,7 +97,7 @@ const LandingPage: React.FC = () => {
               登录
             </button>
             <button
-              onClick={() => { setIsLoginMode(false); setError(''); }}
+              onClick={() => { setIsLoginMode(false); setError(''); setSuccessMsg(''); setEmail(''); setPassword(''); setNickname(''); setShowPassword(false); }}
               className={`flex-1 py-2.5 rounded-lg text-sm font-semibold transition-all ${!isLoginMode
                 ? 'bg-white dark:bg-zinc-700 text-zinc-900 dark:text-white shadow-sm'
                 : 'text-zinc-500 dark:text-zinc-400'
@@ -131,13 +135,22 @@ const LandingPage: React.FC = () => {
           <div className="relative">
             <span className="material-icons-round absolute left-4 top-1/2 -translate-y-1/2 text-zinc-400 text-xl">lock</span>
             <input
-              type="password"
+              type={showPassword ? 'text' : 'password'}
               placeholder="密码"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleSubmit()}
-              className="w-full pl-12 pr-4 py-3.5 rounded-xl border-2 border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-sm"
+              className="w-full pl-12 pr-12 py-3.5 rounded-xl border-2 border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-sm"
             />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300 transition-colors"
+            >
+              <span className="material-icons-round text-xl">
+                {showPassword ? 'visibility' : 'visibility_off'}
+              </span>
+            </button>
           </div>
 
           {/* 错误提示 */}

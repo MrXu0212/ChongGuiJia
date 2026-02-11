@@ -40,7 +40,7 @@ const AppContent: React.FC = () => {
   const showBottomNav = ['/discover', '/message', '/profile', '/favorites'].includes(location.pathname);
 
   return (
-    <div className="flex flex-col min-h-screen max-w-md mx-auto relative bg-white dark:bg-zinc-950 shadow-2xl overflow-hidden">
+    <div className="flex flex-col h-screen max-w-md mx-auto relative bg-white dark:bg-zinc-950 shadow-2xl overflow-hidden">
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/discover" element={<ProtectedRoute><DiscoverPage /></ProtectedRoute>} />

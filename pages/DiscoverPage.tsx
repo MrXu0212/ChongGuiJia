@@ -73,7 +73,7 @@ const DiscoverPage: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col h-full bg-background-light dark:bg-background-dark animate-fade-in pb-20 overflow-y-auto no-scrollbar">
+    <div className="flex flex-col flex-1 min-h-0 bg-background-light dark:bg-background-dark animate-fade-in pb-20 overflow-y-auto no-scrollbar">
       <header className="px-6 pt-12 pb-2">
         <div className="flex justify-between items-center mb-6">
           <div>

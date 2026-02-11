@@ -48,7 +48,7 @@ const ProfilePage: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col h-full bg-background-light dark:bg-background-dark animate-fade-in relative pb-20 overflow-y-auto no-scrollbar">
+    <div className="flex flex-col flex-1 min-h-0 bg-background-light dark:bg-background-dark animate-fade-in relative pb-20 overflow-y-auto no-scrollbar">
       <div className="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 pt-12 pb-4">
         <div className="flex justify-between items-center">
           <h1 className="text-2xl font-black tracking-tight">个人中心</h1>
