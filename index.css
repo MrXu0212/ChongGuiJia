@@ -1,0 +1,41 @@
+/* 宠归家 - 全局基础样式 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #e8ece8;
+}
+
+/* 选中文字颜色 */
+::selection {
+  background-color: rgba(75, 238, 43, 0.2);
+  color: inherit;
+}
+
+/* 输入框自动填充样式覆盖 */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* 暗色模式下的自动填充 */
+.dark input:-webkit-autofill,
+.dark input:-webkit-autofill:hover,
+.dark input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #18181b inset;
+  -webkit-text-fill-color: #e2e8f0;
+}

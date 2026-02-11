@@ -1,0 +1,9 @@
+
+{
+  "name": "宠归家 (PawsConnect)",
+  "description": "A premium pet adoption and rescue platform connecting stray animals with loving homes through a seamless mobile-first experience.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
